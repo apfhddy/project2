@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="jpost_detail">	
+
+	<insert id="insert" parameterType="Jpost_Detail.Jpost_Detail_VO">
+		insert into jpost_detail values(
+			jpost_detail_seq.nextval,
+			#{jpost_detail_id},		<!-- #{jpost_detail_id} -->	<!--  #{apply_mng_id}  500000 438172,4981732,432401,324813,7024132,481970,24198,32741,3839,2,7431724,9874   -->
+			#{jpost_id},				<!--  #{jpost_id} 		테스트할 때 jpost.xml과 맞춰야함-->
+			#{jarea_cno},
+			#{worktime_cno},
+			#{empl_type_cno},		
+			#{posi_cno},
+			#{task},
+			#{lv_cno},
+			#{salary},
+			#{school_cno},
+			#{type}
+		)
+	</insert>
+	
+	<select id="getDetail_no" resultType="int">
+		select jpost_detail_seq.nextval from dual	<!-- jpost_detail의 no -->
+	</select>
+
+	<select id="update" parameterType="Jpost_Detail.Jpost_Detail_VO">
+		update jpost_detail set
+			jarea_cno = #{jarea_cno},				
+			worktime_cno = #{worktime_cno},		
+			empl_type_cno = #{empl_type_cno},			
+			posi_cno = #{posi_cno},
+			task = #{task},
+			lv_cno = #{lv_cno},
+			salary = #{salary},
+			school_cno = #{school_cno},
+			type = #{type}
+			where jpost_detail_id = #{jpost_detail_id}
+	</select>
+	
+</mapper>

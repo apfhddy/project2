@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- dao 설정 -->
+ 	<bean id="bmember_dao" class="Bmember.Bmember_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean>
+	
+	<bean id="createo_mng_dao" class="CreateO_Mng.CreateO_Mng_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+	
+	<bean id="bpf_dao" class="Bpf.Bpf_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+	
+	<bean id="bcontact_dao" class="Bcontact.Bcontact_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+	
+	<bean id="bcontact_type_dao" class="Bcontact_Type.Bcontact_Type_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+	
+	<bean id="bpf_url_dao" class="Bpf_Url.Bpf_Url_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+		
+	<bean id="bpf_sns_dao" class="Bpf_SNS.Bpf_SNS_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+	
+	<bean id="depart_mng_dao" class="Depart_Mng.Depart_Mng_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+	
+	<bean id="posi_mng_dao" class="Posi_Mng.Posi_Mng_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="homepg_type_c_dao" class="Homepg_Type_C.Homepg_Type_C_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+	
+	<bean id="sns_c_dao" class="SNS_C.SNS_C_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="gradeo_mng_dao" class="GradeO_Mng.GradeO_Mng_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="member_dao" class="Member.Member_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+	
+	<bean id="actstat_c_dao" class="ActStat_C.ActStat_C_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+	
+	<bean id="ilchon_dao" class="Ilchon.Ilchon_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="follow_dao" class="Follow.Follow_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="mentor_apply_dao" class="Mentor_Apply.Mentor_Apply_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="mentor_contact_dao" class="Mentor_Contact.Mentor_Contact_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="chat_room_dao" class="Chat_Room.Chat_Room_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+	
+	<bean id="chat_other_dao" class="Chat_Other.Chat_Other_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="chat_dao" class="Chat.Chat_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="mentor_grade_dao" class="Mentor_Grade.Mentor_Grade_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+	
+	<bean id="mentor_grade_mng_dao" class="Mentor_Grade_Mng.Mentor_Grade_Mng_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="mentor_review_dao" class="Mentor_Review.Mentor_Review_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="tech_test_dao" class="Tech_Test.Tech_Test_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="extest_pract_dao" class="ExTest_Pract.ExTest_Pract_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="extest_opt_dao" class="ExTest_Opt.ExTest_Opt_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="tech_name_c_dao" class="Tech_Name_C.Tech_Name_C_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="tech_test_certi_dao" class="Tech_Test_Certi.Tech_Test_Certi_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="tech_test_qna_dao" class="Tech_Test_QnA.Tech_Test_QnA_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="tech_test_opt_dao" class="Tech_Test_Opt.Tech_Test_Opt_DAO">
+		<constructor-arg name="sqlsession" ref="sqlSession"/>
+	</bean> 
+	
+	<bean id="jpost_dao" class="Jpost.Jpost_DAO">
+		<constructor-arg name="sqlSession" ref="sqlSession"/>
+	</bean> 
+	
+	<bean id="jpost_detail_dao" class="Jpost_Detail.Jpost_Detail_DAO">
+		<constructor-arg name="sqlSession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="jarea_c_dao" class="Jarea_C.Jarea_C_DAO">
+		<constructor-arg name="sqlSession" ref="sqlSession"/>
+	</bean> 
+	
+	<bean id="worktime_c_dao" class="Worktime_C.Worktime_C_DAO">
+		<constructor-arg name="sqlSession" ref="sqlSession"/>
+	</bean> 
+	
+	<bean id="empl_type_c_dao" class="Empl_Type_C.Empl_Type_C_DAO">
+		<constructor-arg name="sqlSession" ref="sqlSession"/>
+	</bean> 
+
+	<bean id="career_dao" class="Career.Career_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>	
+	
+	<bean id="edu_dao" class="Edu.Edu_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>	
+	
+	<bean id="rest_dao" class="Rest.Rest_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>	
+	
+	<bean id="rest_rsn_dao" class="Rest_Rsn.Rest_Rsn_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>	
+	
+	<bean id="cert_dao" class="Cert.Cert_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>	
+	
+	<bean id="inscert_dao" class="Inscert.Inscert_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>	
+	
+	<bean id="proj_dao" class="Proj.Proj_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>	
+	
+	<bean id="proj_entry_dao" class="Proj_Entry.Proj_Entry_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>	
+
+	<bean id="army_dao" class="Army.Army_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+	
+	
+	<bean id="pf_ado" class="Pf.Pf_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+	
+	<bean id="award_dao" class="Award.Award_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+
+	<bean id="exam_dao" class="Exam.Exam_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+
+	<bean id="jstat_dao" class="Jstat.Jstat_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+	
+	<bean id="langSkill_dao" class="LangSkill.LangSkill_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+
+	<bean id="thesis_dao" class="Thesis.Thesis_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+
+	<bean id="vol_dao" class="Vol.Vol_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+	
+	<bean id="org_dao" class="Org.Org_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+
+	<bean id="city_c_dao" class="City_C.City_C_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+	
+	<bean id="lv_c_dao" class="Lv_C.Lv_C_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+	
+	<bean id="posi_c_dao" class="Posi_C.Posi_C_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+	
+	<bean id="school_c_dao" class="School_C.School_C_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+	
+	<bean id="apply_dao" class="Apply.Apply_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+	
+	<bean id="apply_list_dao" class="Apply_List.Apply_List_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+	
+	<bean id="apply_form_dao" class="Apply_Form.Apply_Form_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+	
+	<bean id="apply_stat_dao" class="Apply_Stat.Apply_Stat_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+	
+	<bean id="apply_mng_dao" class="Apply_Mng.Apply_Mng_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+
+	<bean id="jstat_c_dao" class="Jstat_C.Jstat_C_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+	
+	<bean id="socialact_c_dao" class="Socialact_C.Socialact_C_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+
+	<bean id="pretest_dao" class="Pretest.Pretest_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+
+	<bean id="pretest_q_dao" class="Pretest_Q.Pretest_Q_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+
+	<bean id="pretest_opt_dao" class="Pretest_Opt.Pretest_Opt_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+
+	<bean id="rec_ask_dao" class="Rec_Ask.Rec_Ask_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+
+	<bean id="rec_form_dao" class="Rec_Form.Rec_Form_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+	
+	<bean id="relation_dao" class="Relation.Relation_DAO">
+		<constructor-arg ref="sqlSession"/>
+	</bean>
+	
+
+
+
+
+</beans>

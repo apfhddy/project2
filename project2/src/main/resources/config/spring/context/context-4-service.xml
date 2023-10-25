@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- service 설정 -->
+ 	<bean id="bmember_service" class="Bmember.Bmember_Service">
+		<constructor-arg ref="bmember_dao"/>
+	</bean>
+	
+	<bean id="createo_mng_service" class="CreateO_Mng.CreateO_Mng_Service">
+		<constructor-arg ref="createo_mng_dao"/>
+	</bean>
+	
+	<bean id="bpf_service" class="Bpf.Bpf_Service">
+		<constructor-arg ref="bpf_dao"/>
+	</bean>
+	 
+	<bean id="bcontact_service" class="Bcontact.Bcontact_Service">
+		<constructor-arg ref="bcontact_dao"/>
+	</bean>
+	
+	<bean id="bcontact_type_service" class="Bcontact_Type.Bcontact_Type_Service">
+		<constructor-arg ref="bcontact_type_dao"/>
+	</bean>
+	
+	<bean id="bpf_url_service" class="Bpf_Url.Bpf_Url_Service">
+		<constructor-arg ref="bpf_url_dao"/>
+	</bean>
+
+	<bean id="bpf_sns_service" class="Bpf_SNS.Bpf_SNS_Service">
+		<constructor-arg ref="bpf_sns_dao"/>
+	</bean>
+	
+	<bean id="depart_mng_service" class="Depart_Mng.Depart_Mng_Service">
+		<constructor-arg ref="depart_mng_dao"/>
+	</bean>
+
+	<bean id="posi_mng_service" class="Posi_Mng.Posi_Mng_Service">
+		<constructor-arg ref="posi_mng_dao"/>
+	</bean>
+
+	<bean id="homepg_type_c_service" class="Homepg_Type_C.Homepg_Type_C_Service">
+		<constructor-arg ref="homepg_type_c_dao"/>
+	</bean>
+
+	<bean id="sns_c_service" class="SNS_C.SNS_C_Service">
+		<constructor-arg ref="sns_c_dao"/>
+	</bean>
+	
+	<bean id="gradeo_mng_service" class="GradeO_Mng.GradeO_Mng_Service">
+		<constructor-arg ref="gradeo_mng_dao"/>
+	</bean>
+
+	<bean id="member_service" class="Member.Member_Service">
+		<constructor-arg ref="member_dao"/>
+	</bean>
+	
+	<bean id="actstat_c_service" class="ActStat_C.ActStat_C_Service">
+		<constructor-arg ref="actstat_c_dao"/>
+	</bean>
+	
+	<bean id="ilchon_service" class="Ilchon.Ilchon_Service">
+		<constructor-arg ref="ilchon_dao"/>
+	</bean>
+
+	<bean id="follow_service" class="Follow.Follow_Service">
+		<constructor-arg ref="follow_dao"/>
+	</bean>
+	
+	<bean id="mentor_apply_service" class="Mentor_Apply.Mentor_Apply_Service">
+		<constructor-arg ref="mentor_apply_dao"/>
+	</bean>
+
+	<bean id="mentor_contact_service" class="Mentor_Contact.Mentor_Contact_Service">
+		<constructor-arg ref="mentor_contact_dao"/>
+	</bean>
+
+	<bean id="chat_room_service" class="Chat_Room.Chat_Room_Service">
+		<constructor-arg ref="chat_room_dao"/>
+	</bean>
+
+
+	<bean id="chat_other_service" class="Chat_Other.Chat_Other_Service">
+		<constructor-arg ref="chat_other_dao"/>
+	</bean>
+
+	<bean id="chat_service" class="Chat.Chat_Service">
+		<constructor-arg ref="chat_dao"/>
+	</bean>
+
+	<bean id="mentor_grade_service" class="Mentor_Grade.Mentor_Grade_Service">
+		<constructor-arg ref="mentor_grade_dao"/>
+	</bean>
+
+	<bean id="mentor_grade_mng_service" class="Mentor_Grade_Mng.Mentor_Grade_Mng_Service">
+		<constructor-arg ref="mentor_grade_mng_dao"/>
+	</bean>
+
+	<bean id="mentor_review_service" class="Mentor_Review.Mentor_Review_Service">
+		<constructor-arg ref="mentor_review_dao"/>
+	</bean>
+
+	<bean id="tech_test_service" class="Tech_Test.Tech_Test_Service">
+		<constructor-arg ref="tech_test_dao"/>
+	</bean>
+
+	<bean id="extest_pract_service" class="ExTest_Pract.ExTest_Pract_Service">
+		<constructor-arg ref="extest_pract_dao"/>
+	</bean>
+
+	<bean id="extest_opt_service" class="ExTest_Opt.ExTest_Opt_Service">
+		<constructor-arg ref="extest_opt_dao"/>
+	</bean>
+
+	<bean id="tech_name_c_service" class="Tech_Name_C.Tech_Name_C_Service">
+		<constructor-arg ref="tech_name_c_dao"/>
+	</bean>
+
+	<bean id="tech_test_certi_service" class="Tech_Test_Certi.Tech_Test_Certi_Service">
+		<constructor-arg ref="tech_test_certi_dao"/>
+	</bean>
+
+	<bean id="tech_test_qna_service" class="Tech_Test_QnA.Tech_Test_QnA_Service">
+		<constructor-arg ref="tech_test_qna_dao"/>
+	</bean>
+
+	<bean id="tech_test_opt_service" class="Tech_Test_Opt.Tech_Test_Opt_Service">
+		<constructor-arg ref="tech_test_opt_dao"/>
+	</bean>
+	
+	<bean id="jpost_service" class="Jpost.Jpost_Service">
+		<constructor-arg ref="jpost_dao"/>
+	</bean> 
+	
+	<bean id="jpost_detail_service" class="Jpost_Detail.Jpost_Detail_Service">
+		<constructor-arg ref="jpost_detail_dao"/>
+	</bean> 
+
+	<bean id="jarea_c_service" class="Jarea_C.Jarea_C_Service">
+		<constructor-arg ref="jarea_c_dao"/>
+	</bean> 
+	
+	<bean id="worktime_c_service" class="Worktime_C.Worktime_C_Service">
+		<constructor-arg ref="worktime_c_dao"/>
+	</bean> 
+	
+	<bean id="empl_type_c_service" class="Empl_Type_C.Empl_Type_C_Service">
+		<constructor-arg ref="empl_type_c_dao"/>
+	</bean> 
+	
+		<!-- 회원 프로필 -->
+	<bean id="career_service" class="Career.Career_Service">
+		<constructor-arg ref="career_dao"/>
+	</bean>
+		
+	<bean id="edu_service" class="Edu.Edu_Service">
+		<constructor-arg ref="edu_dao"/>
+	</bean>
+		
+	<bean id="rest_service" class="Rest.Rest_Service">
+		<constructor-arg ref="rest_dao"/>
+	</bean>
+		
+	<bean id="rest_rsn_service" class="Rest_Rsn.Rest_Rsn_Service">
+		<constructor-arg ref="rest_rsn_dao"/>
+	</bean>
+		
+	<bean id="cert_service" class="Cert.Cert_Service">
+		<constructor-arg ref="cert_dao"/>
+	</bean>
+		
+	<bean id="inscert_service" class="Inscert.Inscert_Service">
+		<constructor-arg ref="inscert_dao"/>
+	</bean>
+		
+	<bean id="proj_service" class="Proj.Proj_Service">
+		<constructor-arg ref="proj_dao"/>
+	</bean>
+		
+	<bean id="proj_entry_service" class="Proj_Entry.Proj_Entry_Service">
+		<constructor-arg ref="proj_entry_dao"/>
+	</bean>
+		
+	<bean id="army_service" class="Army.Army_Service">
+		<constructor-arg ref="army_dao"/>
+	</bean>
+	
+	<bean id="pf_service" class="Pf.Pf_Service">
+		<constructor-arg ref="pf_ado"/>
+	</bean>
+	
+	<bean id="vol_service" class="Vol.Vol_Service">
+		<constructor-arg ref="vol_dao"/>
+	</bean>
+	
+	<bean id="thesis_service" class="Thesis.Thesis_Service">
+		<constructor-arg ref="thesis_dao"/>
+	</bean>
+	
+	<bean id="org_service" class="Org.Org_Service">
+		<constructor-arg ref="org_dao"/>
+	</bean>	
+
+	<bean id="city_c_service" class="City_C.City_C_Service">
+		<constructor-arg ref="city_c_dao"/>
+	</bean>	
+	
+	
+	
+	
+	
+	<bean id="langskill_service" class="LangSkill.LangSkill_Service">
+		<constructor-arg ref="langSkill_dao"/>
+	</bean>
+	
+	<bean id="exam_service" class="Exam.Exam_Service">
+		<constructor-arg ref="exam_dao"/>
+	</bean>
+	
+	<bean id="award_service" class="Award.Award_Service">
+		<constructor-arg ref="award_dao"/>
+	</bean>	
+
+	<bean id="jstat_service" class="Jstat.Jstat_Service">
+		<constructor-arg ref="jstat_dao"/>
+	</bean>	
+
+	<bean id="lv_c_service" class="Lv_C.Lv_C_Service">
+		<constructor-arg ref="lv_c_dao"/>
+	</bean>	
+	
+	<bean id="posi_c_service" class="Posi_C.Posi_C_Service">
+		<constructor-arg ref="posi_c_dao"/>
+	</bean>	
+	
+	<bean id="school_c_service" class="School_C.School_C_Service">
+		<constructor-arg ref="school_c_dao"/>
+	</bean>	
+
+	<bean id="apply_service" class="Apply.Apply_Service">
+		<constructor-arg ref="apply_dao"/>
+	</bean>	
+	
+	<bean id="apply_list_service" class="Apply_List.Apply_List_Service">
+		<constructor-arg ref="apply_list_dao"/>
+	</bean>	
+	
+	<bean id="apply_form_service" class="Apply_Form.Apply_Form_Service">
+		<constructor-arg ref="apply_form_dao"/>
+	</bean>	
+	
+	<bean id="apply_stat_service" class="Apply_Stat.Apply_Stat_Service">
+		<constructor-arg ref="apply_stat_dao"/>
+	</bean>	
+
+	<bean id="apply_mng_service" class="Apply_Mng.Apply_Mng_Service">
+		<constructor-arg ref="apply_mng_dao"/>
+	</bean>	
+
+	<bean id="jstat_c_service" class="Jstat_C.Jstat_C_Service">
+		<constructor-arg ref="jstat_c_dao"/>
+	</bean>	
+
+	<bean id="socialact_c_service" class="Socialact_C.Socialact_C_Service">
+		<constructor-arg ref="socialact_c_dao"/>
+	</bean>	
+
+	<bean id="pretest_service" class="Pretest.Pretest_Service">
+		<constructor-arg ref="pretest_dao"/>
+	</bean>	
+
+	<bean id="pretest_q_service" class="Pretest_Q.Pretest_Q_Service">
+		<constructor-arg ref="pretest_q_dao"/>
+	</bean>	
+
+	<bean id="pretest_opt_service" class="Pretest_Opt.Pretest_Opt_Service">
+		<constructor-arg ref="pretest_opt_dao"/>
+	</bean>	
+
+	<bean id="rec_ask_service" class="Rec_Ask.Rec_Ask_Service">
+		<constructor-arg ref="rec_ask_dao"/>
+	</bean>	
+
+	<bean id="rec_form_service" class="Rec_Form.Rec_Form_Service">
+		<constructor-arg ref="rec_form_dao"/>
+	</bean>	
+
+	<bean id="relation_service" class="Relation.Relation_Service">
+		<constructor-arg ref="relation_dao"/>
+	</bean>	
+	
+	
+	
+</beans>

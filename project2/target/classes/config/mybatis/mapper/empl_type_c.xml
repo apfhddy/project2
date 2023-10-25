@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="empl_type_c">	<!-- dao의 return 파라미터에서 사용되는 값  -->
+
+	<insert id="insert" parameterType="Empl_Type_C.Empl_Type_C_VO">	<!-- 항목 추가할 떄 -->
+		insert into empl_type_c values(
+			#{empl_no},
+			#{empl_type}
+		)
+	</insert>
+
+	<select id="selectList" resultType="Empl_Type_C.Empl_Type_C_VO">	<!-- 해당 select에서 where 받아오는 데이터가 없으니(*로 전부 가져오니까) parameterType 쓸 필요 없음-->
+		select * 
+		from empl_type_c
+	</select>
+
+
+</mapper>

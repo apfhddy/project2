@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Bmember">
+	<!-- SQL문들을 작성하는 파일 -->
+	<insert id="insertUser" parameterType="Bmember.Bmember_DTO">
+		insert into Bmember values(Bmember_seq.nextval,#{bmember_id},1,#{name},#{eNname},#{email},#{pw},#{salt},sysdate,#{regi_Number},#{group_Name,jdbcType=VARCHAR})
+	</insert>
+	
+	<select id="getUserData" parameterType="String" resultType="Bmember.Bmember_DTO">
+		select b.* from Bmember b where email = #{id}
+	</select>
+	
+	<select id="getUserData2" parameterType="String" resultType="Bmember.Bmember_DTO">
+		select * from Bmember where bmember_id = #{id}
+	</select>
+	
+	<update id="updateUser" parameterType="Bmember.Bmember_DTO">
+		update Bmember set name = #{name,jdbcType=VARCHAR},
+		eNname = #{eNname,jdbcType=VARCHAR}
+		where no = #{no}
+	</update>
+	
+	<select id="rgck" parameterType="String" resultType="String">
+		select * from Bmember where regi_number = #{no}
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

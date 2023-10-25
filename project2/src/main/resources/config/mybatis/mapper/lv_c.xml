@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lv_c">
+
+	<insert id="insert" parameterType="Lv_C.Lv_C_VO">	
+		insert into lv_c values(
+			lv_c_seq.nextval,
+			#{lv_type}
+		)
+	</insert>
+
+	<select id="selectList" resultType="Lv_C.Lv_C_VO">
+		select * 
+			from lv_c
+	</select>
+
+</mapper>

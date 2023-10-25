@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="inscert">
+	
+	<insert id="insert" parameterType="Inscert.Inscert_VO">
+		insert into inscert values(
+			#{inscert_no},
+			'pf_no1',			<!-- #{pf_no} -->
+			'member_no1',		<!-- #{member_no} -->
+			#{name},
+			#{author},
+			#{inscert_date}
+		)
+	</insert>
+	
+	<select id="update" parameterType="Inscert.Inscert_VO">
+		update inscert set
+			name=#{name},
+			author=#{author},
+			inscert_date = #{inscert_date}
+			where inscert_no = #{inscert_no}
+	</select>
+		
+	<delete id="delete" parameterType="String">
+		delete inscert
+			where inscert_no = #{inscert_no}
+	</delete>
+	
+	
+	<select id="selectList" resultType="Inscert.Inscert_VO" parameterType="String">
+		select *
+			from inscert
+	</select>
+	
+	<select id="selectOne" resultType="map" parameterType="String">
+		select *
+			from inscert
+	</select>
+	
+	<select id="inscert_vo" resultType="map">
+		select *
+			from inscert
+	</select>
+	
+	
+</mapper>

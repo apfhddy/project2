@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="worktime_c">	
+
+	<insert id="insert" parameterType="Worktime_C.Worktime_C_VO">	<!-- 항목 추가할 떄 -->
+		insert into worktime_c values(
+			#{worktime_no},
+			#{worktime_type}
+		)
+	</insert>
+
+	<select id="selectList" resultType="Worktime_C.Worktime_C_VO">	<!-- 해당 select에서 where 받아오는 데이터가 없으니(*로 전부 가져오니까) parameterType 쓸 필요 없음-->
+		select * 
+		from worktime_c
+	</select>
+	
+</mapper>

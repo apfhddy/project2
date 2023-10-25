@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="rest_rsn">
+	
+	<insert id="insert" parameterType="Rest_Rsn.Rest_Rsn_VO">
+		insert into rest_rsn values(
+			rest_rsn_seq.nextval,			<!-- #{rest_rsn_no} -->		
+			'rest_rsn_id5',					<!-- #{rest_rsn_id) -->
+			#{rsn}
+		)
+	</insert>
+	
+	<select id="update" parameterType="Rest_Rsn.Rest_Rsn_VO">
+		update rest_rsn set
+			rsn = #{rsn}
+			where rest_rsn_id = #{rest_rsn_id}
+	</select>
+		
+	<delete id="delete" parameterType="String">
+		delete rest_rsn
+			where rest_rsn_no = #{rest_rsn_no}
+	</delete>
+	
+	<select id="selectList" resultType="Rest_Rsn.Rest_Rsn_VO">
+		select *
+			from rest_rsn
+	</select>
+</mapper>

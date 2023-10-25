@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="langskill">
+	
+	<insert id="insert" parameterType="LangSkill.LangSkill_VO">
+		insert into langskill values(
+			'langskill_no1',		<!-- #{langskill_no}, -->
+			'pf_no1', 				<!-- #{pf_no},  -->
+			'member_no1',			<!-- #{member_no}, -->
+			#{lang_cno},
+			#{lv}
+		)
+	</insert>
+	
+	<select id="update" parameterType="LangSkill.LangSkill_VO">
+		update langskill set
+			lang_cno = #{lang_cno},
+			lv = #{lv}
+			where langskill_no = #{langskill_no}
+	</select>
+		
+	<delete id="delete" parameterType="String">
+		delete langskill
+			where langskill_no = #{langskill_no}
+	</delete>
+	
+	<select id="selectList" resultType="LangSkill.LangSkill_VO" parameterType="String">
+		select *
+			from langskill
+	</select>
+	
+	<select id="selectOne" resultType="map" parameterType="String">
+		select *
+			from langskill l
+			where l.langskill_no = #{langskill_no}
+	</select>
+	
+	<select id="langskill_vo" resultType="map">
+		select *
+			from langskill
+	</select>
+	
+</mapper>

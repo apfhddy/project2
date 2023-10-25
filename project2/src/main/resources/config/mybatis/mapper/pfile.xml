@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pfile">
+
+	<insert id="insert" parameterType="pfile">
+		insert into pfile(no,filename,alt_text,post_no) values(pfile_seq.nextVal,#{filename},#{altText},#{postNo})
+	</insert>
+	
+	<select id="selectAll" resultType="pfile">
+		select rownum, p.* from pfile p order by rownum desc
+	</select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

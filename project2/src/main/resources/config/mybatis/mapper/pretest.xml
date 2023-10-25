@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pretest">
+
+	<insert id="insert" parameterType="Pretest.Pretest_VO">
+		insert into pretest values(
+			pretest_seq.nextval,
+			'pretest_id4',			<!-- #{pretest_id} -->
+			'jpost_id4',			<!-- #{jpost_id} -->
+			#{classify},
+			1						<!-- #{stat} -->
+		)
+	</insert>
+
+	<select id="update" parameterType="Pretest.Pretest_VO">
+		update pretest set
+			classify=#{classify},
+			where prtest_id = #{pretest_id}  
+	</select>
+	
+	<select id="hidden" parameterType="String">
+		update pretest set
+			stat = 0
+			when pretest_id = #{pretest_id}
+	</select>
+	
+	<select id="pretest_all_vo" resultType="map">
+		select *
+			from pretest p
+			inner join pretest_q q
+			on p.pretest_id = q.pretest_id
+			
+			inner join pretest_opt o
+			on q.pretest_q_id = o.pretest_q_id
+			where p.stat != 0
+	</select>
+	
+	
+	<select id="selectList" parameterType="map" resultType="Pretest.Pretest_VO">	<!-- 문제/답 리스트 -->
+		select *
+			from pretest p
+			inner join pretest_q q
+			on p.pretest_id = q.pretest_id
+			
+			inner join pretest_opt o
+			on q.pretest_opt_id = o.pretest_opt_id
+			
+			where p.pretest_no = #{p_pretest_no}
+			and p.stat != 0
+	</select>
+
+	<select id="selectOne" parameterType="String">
+		select *
+			from pretest p
+			where pretest_id = #{pretest_id}
+			and p.stat != 0
+	</select>
+	
+	
+
+</mapper>

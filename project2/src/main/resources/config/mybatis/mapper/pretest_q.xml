@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pretest_q">
+	
+	<insert id="insert" parameterType="Pretest_Q.Pretest_Q_VO">
+		insert into pretest_q values(
+			pretest_q_seq.nextval,
+			'pretest_q_id4',		<!-- #{pretest_q_id} -->
+			'pretest_id4',			<!-- #{pretest_id} -->
+			#{question}			
+		)
+	</insert>
+
+	<select id="update" parameterType="Pretest_Q.Pretest_Q_VO">
+		update pretest_q set
+			question=#{question}
+	</select>
+	
+	<select id="selectList" parameterType="map" resultType="Pretest_Q.Pretest_Q_VO">
+		select *
+			from pretest_q
+			
+			inner join pretst p
+			on q.pretest_id = p.pretest_id
+			where j.vision != 0
+	</select>
+
+</mapper>

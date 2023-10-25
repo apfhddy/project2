@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="city_c">	
+
+	<insert id="insert" parameterType="cityC">
+		insert into city_c values(
+			city_c_seq.nextval,
+			#{city_no},
+			#{ntcode},
+			#{ctcode},
+			#{ctname}	
+		)
+	</insert>
+	
+	<select id="selectList" resultType="cityC">
+		select *
+			from city_c
+	</select>
+	
+	
+	
+</mapper>

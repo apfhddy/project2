@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="apply">
+	
+	<insert id="insert" parameterType="Apply.Apply_VO">
+		insert into apply values(
+			'apply_id6',		<!-- #{apply_id} -->
+			'member_id6',		<!-- #{member_id} -->
+			#{army_no},			<!-- #{army_id} -->
+			1,					<!-- #{apply_stat_no} -->	
+			'apply_form_id6',	<!-- #{apply_form_id} -->	
+			sysdate
+		)
+	</insert>
+	
+	<select id="update" parameterType="Apply.Apply_VO">
+		update apply set
+			army_id=#{army_id}
+	</select>
+	
+	<select id="selectList" resultType="Apply.Apply_VO">
+		select *
+			from apply a
+	</select>
+	
+	<select id="selectOne" parameterType="String" resultType="map">
+		select *
+			from apply a
+			inner join apply_form af
+			on a.apply_form_id = af.apply_form_id
+			
+			where a.apply_form_id = #{apply_form_id}
+	</select>
+	
+	<select id="getContent" parameterType="String" resultType="map">
+		select *
+			from apply a
+			inner join apply_form af
+			on a.apply_form_id = af.apply_form_id
+			
+			inner join member m
+			on a.member_id = m.member_id
+			
+			inner join army ar
+			on a.army_no = ar.army_no
+			
+			where a.apply_form_id = #{apply_form_id}
+	</select>
+	
+	<!-- apply / apply_form 칼럼 사용 -->
+	<select id="apply_vo" resultType="map">
+		select *
+			from apply a
+			inner join apply_form af
+			on a.apply_form_id = af.apply_form_id
+			order by a.apply_date desc
+	</select>
+
+	<select id="submit_vo" resultType="map">
+		select *
+			from apply a
+			inner join apply_form af
+			on a.apply_form_id = af.apply_form_id
+			order by a.apply_date desc
+			
+			inner join jpost j
+			on 
+	</select>
+	
+	<!-- apply / apply_form / army / member 칼럼 사용 -->
+	<select id="apply_all_vo" resultType="map" parameterType="String">
+		select *
+			from apply a
+			inner join apply_form af
+			on a.apply_form_id = af.apply_form_id
+			
+			inner join army ar
+			on a.army_no = ar.army_no
+			
+			inner join member m
+			on a.member_id = m.member_id
+			
+			where a.apply_id = #{apply_id}
+			
+	</select>
+	
+</mapper>

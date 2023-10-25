@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="exam">
+	
+
+	<select id="selectOne" resultType="exam" parameterType="String">
+		SELECT * FROM exam where member_id = {memberId}
+	</select>
+	
+	<insert id="insert" parameterType="exam">
+		insert into exam(exam_no, pf_no, member_id, jarea_cno, legi, name, score, lv, exam_date, detail) 
+		values(exam_seq.nextval,#{pfNo},#{memberId},#{jareaCno},#{legi},#{name},#{score},#{lv},#{examDate},#{detail})
+	</insert>
+
+	<select id="getNo" resultType="int">
+		select exam_seq.nextval from dual
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
